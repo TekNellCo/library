@@ -1,24 +1,33 @@
 let movieLibrary = [];
 let form = document.querySelector('form');
 let listMovies = document.querySelector('.listmovies');
-let addMovies = document.querySelector('.movieadd');
+let addMovies = document.querySelectorAll('.movieadd');
 let welcomeScreen = document.querySelector('.welcome');
 let formScreen = document.querySelector('.formbox');
 let addedScreen = document.querySelector('.added');
-let libraryScreen = document.querySelector('.library')
+let libraryScreen = document.querySelector('.library');
+let libraryButtons = document.querySelectorAll('.checklibrary');
+let rating = document.querySelector('option')
 
-// WHEN CLICK 'ADD MOVIE' SWITCHES TO FORM SCREEN
-addMovies.addEventListener('click',()=>{
-    formScreen.style.cssText = "display:flex";
-    welcomeScreen.style.cssText = "display:none";
-    libraryScreen.style.display = "none"
-})
 
-// WHEN CLICK 'CHECK LIBRARY' SWITCHES TO LIBRARY SCREEN
-document.querySelector('.checklibrary').addEventListener('click',()=>{
+// DISPLAYS LIBRARY WHILE REMOVING OTHER DISPLAYS
+libraryButtons.forEach((btn)=>{
+    btn.addEventListener('click',()=>{
     welcomeScreen.style.display = "none";
     formScreen.style.display = "none";
     libraryScreen.style.display = "flex";
+    tableCreator();
+    })
+})
+
+// DISPLAY MOVIE FORM WHILE REMOVING OTHER DISPLAYS
+addMovies.forEach((btn)=>{
+    btn.addEventListener('click',()=>{
+        formScreen.style.cssText = "display:flex";
+        welcomeScreen.style.cssText = "display:none";
+        libraryScreen.style.display = "none"
+
+    })
 })
 
 // CLOSES CONFIRMATION SCREEN
@@ -31,18 +40,25 @@ form.addEventListener('submit',(e)=>{
     e.preventDefault();
     let movie = {
         title : document.getElementById('moviename').value,
-        rating : document.querySelector('option').value,
-        comment : document.querySelector('.comment').value,
+        rating : document.querySelector('select').value,
+        comment : document.getElementById('comment').value,
     }
+    console.log(movie.rating)
     movieLibrary.push(movie);
     addedScreen.style.display = "flex"
     form.reset();
 })
 
-// SHOWS WHOLE LIST INSIDE ARRAY
-listMovies.addEventListener('click',()=>{
-    for(i=0; i< movieLibrary.length; ++i){
-        console.table(movieLibrary[i])
+
+// CREATES A TABLE FROM THE INPUT DATA
+function tableCreator(){
+    let table = document.querySelector('table');
+    for(i=0;i<movieLibrary.length;i++){
+        let row = `<tr>
+            <td>${movieLibrary[i].title}</td> <td>${movieLibrary[i].rating}</td> <td>${movieLibrary[i].comment}</td>
+                    </tr>`
+                table.innerHTML += row
     }
-})
+}
+
 

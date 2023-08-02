@@ -15,16 +15,30 @@
 
 <div class="welcome">
     <h1>Would you like to add a movie or check library?</h1>
-
-<div>
+    <div>
         <button class="movieadd">Add movie</button>
         <button class="checklibrary">Check Library</button>
+    </div>
 </div>
-</div>
+
+
+
+
+
+
+
+
+
 
 <div class="library">
-
-    
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Rating</th>
+            <th>Comments</th>
+        </tr>
+    </table>
+    <button class="movieadd">Add movie</button>
 </div>
 
 
@@ -60,15 +74,16 @@
                 </select>
             </div>
             <div class="comment">
-                <textarea placeholder="I thought the movie was..." ></textarea>
+                <textarea id="comment" placeholder="I thought the movie was..." ></textarea>
             </div>
             <div class="submitbox">
                 <button id="submit">Submit</button>
             </div>
-        </form>
+
 
     </div> 
-     <button class="listmovies">Show Library</button>
+</form>
+<button class="checklibrary">Check Library</button>
 
 
 
