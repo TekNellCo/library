@@ -1,0 +1,68 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid red;
+    width: 50rem;
+    height:30rem;
+    position: relative;
+}
+.library{
+    background-color: black;
+    height: 40rem;
+    width: 50rem;
+    display: none;
+}
+.formbox{
+    border: solid;
+    width: 30rem;
+    height: 20rem;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.added{
+    width: 100%;
+    height:100%;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+}
+form{
+    border: solid pink;
+}
+.movienameinput{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.rating{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.comment{
+    display: flex;
+    justify-content: center;
+}
+.comment textarea{
+    width: 25rem;
+    height:10rem
+}
+.submitbox{
+    display: flex;
+    justify-content: center;
+}
+
