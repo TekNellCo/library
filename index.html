@@ -8,82 +8,110 @@
 </head>
 <body>
 
-
-
-
-
-
-<div class="welcome">
-    <h1>Would you like to add a movie or check library?</h1>
-    <div>
-        <button class="movieadd">Add movie</button>
-        <button class="checklibrary">Check Library</button>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<div class="library">
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Rating</th>
-            <th>Comments</th>
-        </tr>
-    </table>
-    <button class="movieadd">Add movie</button>
-</div>
-
-
-
-
-
-
-    <div class="formbox">
-
-        <div class="added">
-            <h7>Movie added!</h7>
-            <button class="okayadded">ok</button>
+<div class="center">
+    <form id="formbox" action="">
+        <div>
+            <label for="title">Title</label>
+            <input id="booktitle" type="text">
         </div>
-
-        <form action="">
-            <div class="movienameinput">
-                <label for="moviename">Movie name</label>
-                <input id="moviename" type="text"></div>
-            <div>
-            <div class="rating">
-                <h7>Rating (1 being terrible - 10 being amazing)</h7>
-                <select>
-                    <option data="1" type="">1</option>
-                    <option data="2" type="">2</option>
-                    <option data="3" type="">3</option>
-                    <option data="4" type="">4</option>
-                    <option data="5" type="">5</option>
-                    <option data="6" type="">6</option>
-                    <option data="7" type="">7</option>
-                    <option data="8" type="">8</option>
-                    <option data="9" type="">9</option>
-                    <option data="10" type="">10</option>
-                </select>
-            </div>
-            <div class="comment">
-                <textarea id="comment" placeholder="I thought the movie was..." ></textarea>
-            </div>
-            <div class="submitbox">
-                <button id="submit">Submit</button>
-            </div>
+        <div>
+            <label for="Pages">Pages Read</label>
+            <input id="pagesread" type="number" min="0" max="3000">
+        </div>
+        <div>
+            <textarea name="Comments" id="comments" cols="30" rows="10" placeholder="Comments on book"></textarea>
+    </div>
+    <div class="buttonbox">
+        <button class="submit">Submit</button>
+        <button class="close">Close</button>
+    </div>
+    </form>
+    
+</div>
 
 
-    </div> 
-</form>
-<button class="checklibrary">Check Library</button>
+
+<div class="bookcardcontainer">
+    <div class="bookCard">
+        <div class="left">
+            <h3>Title: Harry Potter</h3>
+            <h3>Pages: 325</h3>
+            <h3>Comments: "I thought it was great"</h3>
+        </div>
+        <div class="right">
+            <h3>X</h3>
+
+            <div class="readBox">
+                <label for="chebox">Read</label>
+                <input type="checkbox">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="bookCard">
+        <div class="left">
+            <h3>Title: Harry Potter</h3>
+            <h3>Pages: 325</h3>
+            <h3>Comments: "I thought it was great"</h3>
+        </div>
+        <div class="right">
+            <h3>X</h3>
+
+            <div class="readBox">
+                <label for="chebox">Read</label>
+                <input type="checkbox">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bookCard">
+        <div class="left">
+            <h3>Title: Harry Potter</h3>
+            <h3>Pages: 325</h3>
+            <h3>Comments: "I thought it was great"</h3>
+        </div>
+        <div class="right">
+            <h3>X</h3>
+
+            <div class="readBox">
+                <label for="chebox">Read</label>
+                <input type="checkbox">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bookCard">
+        <div class="left">
+            <h3>Title: Harry Potter</h3>
+            <h3>Pages: 325</h3>
+            <h3>Comments: "I thought it was great"</h3>
+        </div>
+        <div class="right">
+            <h3>X</h3>
+
+            <div class="readBox">
+                <label for="chebox">Read</label>
+                <input type="checkbox">
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<button class="addbook">Add book</button>
+
+
+
+
+
+
+
+
 
 
 

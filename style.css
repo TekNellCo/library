@@ -3,73 +3,73 @@
     padding: 0;
     margin: 0;
 }
-.welcome{
+body{
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: solid red;
-    width: 50rem;
-    height:30rem;
-    position: relative;
+    width: 100vw;
+    height: 100vh;
+
 }
-.library{
-    background-color: white;
-    height: 40rem;
-    width: 50rem;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.library button{
-    width: 6rem;
-    height: 2rem;
-}
-.formbox{
-    border: solid;
-    width: 30rem;
-    height: 20rem;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-.added{
-    width: 100%;
-    height:100%;
-    display: none;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
+.center{
+    height: 100vh;
+    width: 100vw;
     position: absolute;
-}
-form{
-    border: solid pink;
-}
-.movienameinput{
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.rating{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.comment{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.comment textarea{
+.addbook{
+    position: absolute;
+    bottom:0;
+    right:0;
+    margin:3rem;
+}
+.bookcardcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height:100vh;
+    padding:5rem;
+    gap:3rem
+}
+.bookCard{
+    display: flex;
+    width: 20rem;
+    height: 25rem;
+    border: solid;
+}
+.bookCard .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0 2rem 2rem;
+}
+.bookCard .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 0.5rem 1rem 0rem
+}
+.readBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#formbox{
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: white;
+    font-size: 1.2rem;
     width: 25rem;
-    height:10rem
+    height:20rem;
 }
-.submitbox{
-    display: flex;
-    justify-content: center;
+#formbox button{
+    margin:5px
 }
-
