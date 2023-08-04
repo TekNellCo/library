@@ -20,7 +20,6 @@ addBook.addEventListener('click',()=>{
 document.querySelector('.close').addEventListener('click',(e)=>{
     e.preventDefault();
     center.style.display = "none";
-
 })
 
 // SUBMITS INFORMATION AND TRIGGERS LIBRARY FUNCTION
@@ -28,7 +27,6 @@ document.querySelector('.submit').addEventListener('click',(e)=>{
     e.preventDefault();
     LibraryInput();
 })
-
 
 // TURNS INPUT INTO OBJECT AND PUSHES OBJECT INTO ARRAY, THEN SENDS INFO TO CARD CREATOR
 function LibraryInput(){
@@ -42,13 +40,16 @@ function LibraryInput(){
     formBox.reset();
 }
 
-// RECIEVES INFORMATION FROM LIBRARY INPUT AND CREATES CARD ELEMENTS
+// RECIEVES INFORMATION FROM LIBRARY OUTPUT AND CREATES CARD ELEMENTS
 function cardCreator(title,pages,comment){ 
     let bookCard = document.createElement('div');
     let left = document.createElement('left');
     let h30 = document.createElement('h3');
+    let p0 = document.createElement('p');
     let h31 = document.createElement('h3');
+    let p1 = document.createElement('p');
     let h32 = document.createElement('h3');
+    let p2 = document.createElement('p');
     let right = document.createElement('right');
     let exit = document.createElement('button');
     let readBox = document.createElement('div');
@@ -59,29 +60,49 @@ function cardCreator(title,pages,comment){
 bookCardContainer.append(bookCard);
 bookCard.append(left);
 left.append(h30);
+left.append(p0);
 left.append(h31);
+left.append(p1);
 left.append(h32);
+left.append(p2);
 bookCard.append(right);
 right.append(exit);
 right.append(readBox);
 readBox.append(labelCheck);
 readBox.append(inputCheck);
 
-// bookCard.classList.add = "bookcard";
-bookCard.className = "bookcard"
+bookCard.className = `bookcard`
 left.className = "left";
 right.className = "right";
 readBox.className = "readbox";
 
-h30.textContent = `Title: ${title}`
-h31.textContent = `Pages: ${pages}`
-h32.textContent = `Comments: ${comment}`
-
+h30.textContent = `Title:`
+p0.textContent = `${title}`
+h31.textContent = `Pages:`
+p1.textContent = `${pages}`
+h32.textContent = `Comments:`
+p2.textContent = `${comment}`
 exit.textContent = "X"
 labelCheck.textContent = "Read"
 
-}
+///GIVES  "x" BUTTON FUNCTIONALITY ON EACH CARD
+exit.addEventListener('click',(e)=>{
+    e.target.parentNode.parentNode.remove();
+})
 
+
+
+///CHANGED BACKGROUND COLOR ACCORDING TO BOX-CHECKED OR NOT
+inputCheck.addEventListener('click',(e)=>{
+    if(e.target.checked === true){
+        e.target.parentNode.parentNode.parentNode.style.cssText = "background-color: green"
+    }else{
+        e.target.parentNode.parentNode.parentNode.style.cssText = "background-color: red"
+        
+    }
+})
+
+}
 
 
 

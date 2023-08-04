@@ -19,10 +19,13 @@ body{
     align-items: center;
 }
 #addbook{
-    position: absolute;
+    position:fixed;
+    z-index: 100;
     bottom:0;
     right:0;
     margin:3rem;
+    height: 2rem;
+
 }
 .bookcardcontainer{
     display: flex;
@@ -36,7 +39,9 @@ body{
     display: flex;
     width: 20rem;
     height: 25rem;
+    background-color: red;
     border: solid;
+    border-radius: 20px;
 }
 .bookcard .left{
     display: flex;
@@ -49,12 +54,21 @@ body{
     overflow: hidden;
     text-align: center;
 }
+h3{
+    color:white;
+
+}
 .bookcard .right{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding:1rem 0.5rem 1rem 0rem
+}
+.exit{
+    padding:1px;
+    border: none;
+    cursor: pointer;
 }
 .readbox{
     display: flex;
@@ -76,3 +90,4 @@ body{
 #formbox button{
     margin:5px
 }
+
