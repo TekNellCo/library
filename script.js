@@ -55,7 +55,7 @@ function cardCreator(title,pages,comment){
     let readBox = document.createElement('div');
     let labelCheck = document.createElement('label')
     let inputCheck = document.createElement('input')
-    inputCheck.type = "checkbox"
+    inputCheck.type = "checkbox";
 
 bookCardContainer.append(bookCard);
 bookCard.append(left);
@@ -75,6 +75,7 @@ bookCard.className = `bookcard`
 left.className = "left";
 right.className = "right";
 readBox.className = "readbox";
+exit.className = "exit";
 
 h30.textContent = `Title:`
 p0.textContent = `${title}`
@@ -95,9 +96,9 @@ exit.addEventListener('click',(e)=>{
 ///CHANGED BACKGROUND COLOR ACCORDING TO BOX-CHECKED OR NOT
 inputCheck.addEventListener('click',(e)=>{
     if(e.target.checked === true){
-        e.target.parentNode.parentNode.parentNode.style.cssText = "background-color: green"
+        e.target.parentNode.parentNode.parentNode.style.cssText = "background:#93d788;"
     }else{
-        e.target.parentNode.parentNode.parentNode.style.cssText = "background-color: red"
+        e.target.parentNode.parentNode.parentNode.style.cssText = "background-color: #c7cbcc"
         
     }
 })

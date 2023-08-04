@@ -2,12 +2,16 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
+
 }
 body{
     position: relative;
     display: flex;
     width: 100vw;
     height: 100vh;
+    background-image: url(images/pexels-stanislav-kondratiev-2908984.jpg);
+    background-size: cover;
 
 }
 .center{
@@ -39,8 +43,8 @@ body{
     display: flex;
     width: 20rem;
     height: 25rem;
-    background-color: red;
-    border: solid;
+    background: linear-gradient(to bottom right,#929898,#c7cbcc);
+
     border-radius: 20px;
 }
 .bookcard .left{
@@ -55,6 +59,11 @@ body{
     text-align: center;
 }
 h3{
+    color:#61666a;
+
+
+}
+p{
     color:white;
 
 }
@@ -66,11 +75,15 @@ h3{
     padding:1rem 0.5rem 1rem 0rem
 }
 .exit{
+    color:#61666a;
     padding:1px;
     border: none;
     cursor: pointer;
+    background-color: transparent;
+    
 }
 .readbox{
+    color:#61666a;
     display: flex;
     flex-direction: column;
     justify-content: center;
